@@ -26,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hellogo
+  name: hellopy
 spec:
   selector:
-    app: hellogo
+    app: hellopy
   ports:
     - protocol: TCP
       port: 5000
