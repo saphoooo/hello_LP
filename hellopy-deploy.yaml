@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hellopy
+  labels:
+    app: hellopy
+    version: v1.0.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hellopy
+  template:
+    metadata:
+      labels:
+        app: hellopy
+    spec:
+      containers:
+      - name: hellopy
+        image: saphoooo/hellopy:latest
+        ports:
+        - containerPort: 5000
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hellogo
+spec:
+  selector:
+    app: hellogo
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+  type: NodePort
