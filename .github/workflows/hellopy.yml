@@ -1,4 +1,4 @@
-name: build_jokeback
+name: hellopy
 
 on:
   pull_request:

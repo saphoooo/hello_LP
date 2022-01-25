@@ -1,4 +1,4 @@
-name: build_jokeback
+name: hellogo
 
 on:
   pull_request:
